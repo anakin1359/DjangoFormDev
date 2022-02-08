@@ -1,7 +1,6 @@
-from socket import fromshare
-from django import fromshare
+from django import forms
 
 class UserInfo(forms.Form):
   name = forms.CharField()
-  age = forms.IntegerRangeField()
-  mail = forms.forms.EmailField()
+  age = forms.IntegerField()
+  mail = forms.EmailField()
