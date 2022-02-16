@@ -12,9 +12,10 @@ def form_page(request):
     
     if form.is_valid():   # フィールの適正値検査（バリデーションの実装）
       print("フォールドの内容に誤りはありません。")
-      print(
-        f"name: {form.cleaned_data['name']}, mail: {form.cleaned_data['mail']}, age: {form.cleaned_data['age']}"
-      )
+      # print(
+      #   f"name: {form.cleaned_data['name']}, mail: {form.cleaned_data['mail']}, age: {form.cleaned_data['age']}"
+      # )
+      print(form.changed_data)
       
   return render(
     request, "formapp/form_page.html", context={
